@@ -11,7 +11,7 @@
   Azqa  Nadeem
 
 
-  | blog
+  | Projects
 
 </title>
 <meta name="description" content="A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
@@ -37,7 +37,7 @@
 <link rel="icon" href="/assets/logo/logo.png">
 
 <link rel="stylesheet" href="/assets/css/main.css">
-<link rel="canonical" href="/blog/">
+<link rel="canonical" href="/projects/">
 
 <!-- JQuery -->
 <!-- jQuery -->
@@ -97,9 +97,11 @@
               </a>
           </li>
 		  <!-- Projects -->
-		  <li class="nav-item ">
+		  <li class="nav-item active">
               <a class="nav-link" href="/projects/">
                 Projects
+                
+                <span class="sr-only">(current)</span>
                 
               </a>
           </li>
@@ -152,19 +154,68 @@
     <div class="container mt-5">
       <div class="post">
 
-  <div class="header-bar">
-    <h1></h1>
-    <h2>a simple whitespace theme for academics</h2>
+  <header class="post-header">
+    <h1 class="post-title font-weight-bolder">Projects</h1>
+    <p class="post-description"></p>
+  </header>
+  <article>
+    <!-- pages/projects.md -->
+<div class="projects">
+  <!-- Display categorized projects -->
+  <h2 class="category">On-going</h2>
+  <!-- Generate cards for each project -->
+  <div class="grid row row-cols-3"><!-- _includes/projects.html -->
+<div class="grid-item col">
+  <a href="/projects/phd-xai-incidentresponse/">
+      <div class="card hoverable">
+		<img src="/assets/img/projects/soc.jpg" alt="project thumbnail" />
+        <div class="card-body">
+          <h2 class="card-title">Explainable Incident Response</h2>
+          <p class="card-text">PhD position on cybersecurity, explanability, and incident response</p>
+          </div>
+        </div>
+    </a>
+</div>
   </div>
+  <h2 class="category">Completed</h2>
+  <!-- Generate cards for each project -->
+  <div class="grid row row-cols-3"><!-- _includes/projects.html -->
+<div class="grid-item col">
+  <a href="/projects/alert-driven-attackgraphs/">
+      <div class="card hoverable">
+		<img src="/assets/img/projects/ags.png" alt="project thumbnail" />
+        <div class="card-body">
+          <h2 class="card-title">Attacker Strategy Discovery</h2>
+          <p class="card-text">Bridging the gap between alert management and attack graph generation</p>
+          </div>
+        </div>
+    </a>
+</div><!-- _includes/projects.html -->
+<div class="grid-item col">
+  <a href="/projects/sequence-clustering/">
+      <div class="card hoverable">
+		<img src="/assets/img/projects/seqclustering.png" alt="project thumbnail" />
+        <div class="card-body">
+          <h2 class="card-title">Real-time Sequence Clustering</h2>
+          <p class="card-text">An interpretable algorithm to cluster sequences in real-time</p>
+          </div>
+        </div>
+    </a>
+</div><!-- _includes/projects.html -->
+<div class="grid-item col">
+  <a href="/projects/xai-for-sec/">
+      <div class="card hoverable">
+		<img src="/assets/img/projects/sok.png" alt="project thumbnail" />
+        <div class="card-body">
+          <h2 class="card-title">Explainability in Security</h2>
+          <p class="card-text">So what does explainability mean in cybersecurity?</p>
+          </div>
+        </div>
+    </a>
+</div>
+  </div></div>
 
-
-  <ul class="post-list">
-    
-  </ul>
-
-  
-
-
+  </article>
 </div>
 
     </div>

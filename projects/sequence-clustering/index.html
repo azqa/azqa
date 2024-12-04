@@ -11,7 +11,7 @@
   Azqa  Nadeem
 
 
-  | blog
+  | Real-time Sequence Clustering
 
 </title>
 <meta name="description" content="A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
@@ -37,7 +37,7 @@
 <link rel="icon" href="/assets/logo/logo.png">
 
 <link rel="stylesheet" href="/assets/css/main.css">
-<link rel="canonical" href="/blog/">
+<link rel="canonical" href="/projects/sequence-clustering/">
 
 <!-- JQuery -->
 <!-- jQuery -->
@@ -152,19 +152,149 @@
     <div class="container mt-5">
       <div class="post">
 
-  <div class="header-bar">
-    <h1></h1>
-    <h2>a simple whitespace theme for academics</h2>
+  <header class="post-header">
+    <h1 class="post-title font-weight-bolder">Real-time Sequence Clustering</h1>
+    <p class="post-description">An interpretable algorithm to cluster sequences in real-time</p>
+  </header>
+  <article>
+    <p><strong>Description:</strong></p>
+
+<p>In cybersecurity, malicious behavior is known to evolve rapidly to evade detection. 
+For instance, network traffic must be continuously monitored to accurately characterize malware capabilities at any given time.</p>
+
+<p>This creates the need for a real-time sequence clustering approach that can handle evolving 
+data distributions (i.e., due to concept drift). Existing real-time clustering algorithms have limited support for sequential data. 
+Besides, a highly efficient algorithm is required to cluster the large volumes of network traffic required for real-time behavioral analytics. 
+Furthermore, the algorithms that support sequential data do not provide interpretability, which is a problem in itself since the 
+analysts need to be able to understand the evolving behaviors captured by a cluster. There is currently no way to cluster large sequential datasets 
+in real-time while supporting interpretability and concept drift.</p>
+
+<p>In this project, we aim to develop the first interpretable clustering algorithm that efficiently clusters sequences in real-time <a class="citation" href="#nadeem2022secleds">(Nadeem &amp; Verwer, 2022)</a>. 
+Specifically, we aim to create a linear and real-time version of the k-medoids algorithm. This algorithm should be able to summarize network traffic, 
+i.e., represent important concepts using its k medoids. We will then investigate whether such an algorithm improves the quality of malware capability assessment 
+compared to standard approaches.</p>
+
+<p><strong>Code repo:</strong> <a href="https://github.com/tudelft-cda-lab/SECLEDS">SECLEDS</a> <a href="https://github.com/tudelft-cda-lab/SECLEDS"><img src="https://img.shields.io/github/stars/tudelft-cda-lab/SECLEDS?style=social" alt="SECLEDS" /></a></p>
+
+  </article><h2>References</h2>
+  <div class="publications">
+    <ol class="bibliography"><li><div class="row">
+  <div class="col-sm-2 abbr">
+  
+    
+    <abbr class="badge">ECML</abbr>
+    
+  
   </div>
 
-
-  <ul class="post-list">
+  <div id="nadeem2022secleds" class="col-sm-10">
     
-  </ul>
+      <div class="title main-name">SECLEDS: Sequence Clustering in Evolving Data Streams via Multiple Medoids <br/>and Medoid Voting</div>
+      <div class="author">
+        
+          
+          
+          
+          
+          
+          
+            
+              
+                <em>Nadeem, Azqa</em>,
+              
+            
+          
+        
+          
+          
+          
+          
+          
+          
+            
+              
+                
+                  and Verwer, Sicco
+                
+              
+            
+          
+        
+      </div>
 
-  
+      <div class="periodical">
+      
+        <em>In Proceedings of the European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML/PKDD)</em>,
+      
+      
+        2022
+      
+	  
+      </div>
+    
 
+    <div class="links">
+    
+      <a class="abstract btn btn-sm z-depth-0" role="button">Abstract</a>
+    
+    
+	
+    
+      
+      <a href="https://arxiv.org/abs/2206.12190" class="btn btn-sm z-depth-0" role="button" target="_blank">PDF</a>
+      
+    
+	
+    
+    
+    
+    
+      <a href="https://github.com/tudelft-cda-lab/SECLEDS" class="btn btn-sm z-depth-0" role="button" target="_blank">Code</a>
+    
+    
+	
+    
+      
+      <a href="/assets/slides/secleds-presentation.pdf" class="btn btn-sm z-depth-0" role="button" target="_blank">Slides</a>
+      
+    
+    
+	
+    </div>
 
+    <!-- Hidden abstract block -->
+    
+    <div class="abstract hidden">
+      <p>Sequence clustering in a streaming environment is challenging because it is computationally expensive, and the sequences may evolve over time. K-medoids or Partitioning Around Medoids (PAM)
+is commonly used to cluster sequences since it supports alignment-based distances, and the k-centers being actual data items helps with cluster
+interpretability. However, offline k-medoids has no support for concept drift, while also being prohibitively expensive for clustering data streams.
+We therefore propose SECLEDS, a streaming variant of the k-medoids
+algorithm with constant memory footprint. SECLEDS has two unique
+properties: i) it uses multiple medoids per cluster, producing stable highquality
+clusters, and ii) it handles concept drift using an intuitive Medoid
+Voting scheme for approximating cluster distances. Unlike existing adaptive
+algorithms that create new clusters for new concepts, SECLEDS follows
+a fundamentally different approach, where the clusters themselves
+evolve with an evolving stream. Using real and synthetic datasets, we
+empirically demonstrate that SECLEDS produces high-quality clusters
+regardless of drift, stream size, data dimensionality, and number of clusters.
+We compare against three popular stream and batch clustering algorithms.
+The state-of-the-art BanditPAM is used as an offline benchmark.
+SECLEDS achieves comparable F1 score to BanditPAM while reducing
+the number of required distance computations by 83.7%. Importantly,
+SECLEDS outperforms all baselines by 138.7% when the stream contains
+drift. We also cluster real network traffic, and provide evidence
+that SECLEDS can support network bandwidths of up to 1.08 Gbps
+while using the (expensive) dynamic time warping distance.</p>
+    </div>
+    
+
+    <!-- Hidden bibtex block -->
+    
+  </div>
+</div>
+</li></ol>
+  </div>
 </div>
 
     </div>
